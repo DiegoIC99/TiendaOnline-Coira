@@ -1,0 +1,15 @@
+nav{
+    justify-content: space-around;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #304ffe;
+    color: white;
+    align-items: center;
+
+    li{
+        list-style-type: none;
+        justify-content: space-around;
+        display: flex;
+        width: 40%;
+    }
+}
