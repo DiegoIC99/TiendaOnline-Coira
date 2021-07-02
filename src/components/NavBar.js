@@ -1,6 +1,5 @@
-import react from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import IconNavbar from './CartWidget'
 
 export function NavBar() {
 
@@ -9,11 +8,11 @@ export function NavBar() {
             <div className="logo">
                 Shop Store
             </div>
-            <li>
-                <ul><a>Inicio</a></ul>
-                <ul><a>Productos</a></ul>
-                <ul><a><FontAwesomeIcon icon={faShoppingCart} /></a></ul>
-            </li>
+            <ul>
+                <li><a>Inicio</a></li>
+                <li><a>Productos</a></li>
+                <IconNavbar />
+            </ul>
         </nav>
     )
 

@@ -5,11 +5,23 @@ nav{
     background-color: #304ffe;
     color: white;
     align-items: center;
+    user-select: none;
 
-    li{
+    ul{
         list-style-type: none;
         justify-content: space-around;
         display: flex;
-        width: 40%;
+        width: 20%;
     }
+    ul li a{
+        cursor: pointer;
+    }
+
+    ul .icon__navbar{
+        cursor: pointer;
+        &:hover + .contCart{
+            background-color: blue;
+        }
+    }
+    
 }
