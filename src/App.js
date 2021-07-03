@@ -8,7 +8,8 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
 
-  let nameCart = <FontAwesomeIcon icon={faShoppingCart} />;
+  let textCart = `Carrito de compras`;
+  let nameCart = <div><FontAwesomeIcon icon={faShoppingCart} /> {textCart}</div>;
 
   return (
     <div className="container">

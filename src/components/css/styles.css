@@ -48,6 +48,7 @@ nav ul .icon__navbar:hover + .contCart {
   min-width: 20vw;
   text-align: center;
   top: 5rem;
+  color: #000;
   -webkit-transition: -webkit-transform ease-out 150ms;
   transition: -webkit-transform ease-out 150ms;
   transition: transform ease-out 150ms;
