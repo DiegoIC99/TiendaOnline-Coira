@@ -6,9 +6,7 @@ export default function IconNavbar() {
 
     return (
         <li className="icon__navbar">
-            <a>
-                <FontAwesomeIcon icon={faShoppingCart} />
-            </a>
+            <FontAwesomeIcon icon={faShoppingCart} />
         </li>
     )
 
