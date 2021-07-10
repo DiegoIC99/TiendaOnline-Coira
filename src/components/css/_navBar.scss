@@ -1,3 +1,5 @@
+$colorPrincipal: #304ffe;
+
 header{
     position: fixed;
     width: 100%;
@@ -6,26 +8,22 @@ header{
         justify-content: space-around;
         display: flex;
         box-sizing: border-box;
-        background-color: #304ffe;
+        background-color: $colorPrincipal;
         color: white;
         align-items: center;
         user-select: none;
+
+        a{
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
 
         ul{
             list-style-type: none;
             justify-content: space-around;
             display: flex;
             width: 40%;
-        }
-        ul li a{
-            cursor: pointer;
-        }
-
-        ul .icon__navbar{
-            cursor: pointer;
-            &:hover + .contCart{
-                background-color: blue;
-            }
         }
         
     }

@@ -23,6 +23,12 @@ header nav {
           user-select: none;
 }
 
+header nav a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
 header nav ul {
   list-style-type: none;
   -ms-flex-pack: distribute;
@@ -33,16 +39,8 @@ header nav ul {
   width: 40%;
 }
 
-header nav ul li a {
-  cursor: pointer;
-}
-
-header nav ul .icon__navbar {
-  cursor: pointer;
-}
-
-header nav ul .icon__navbar:hover + .contCart {
-  background-color: blue;
+.contShown {
+  display: block !important;
 }
 
 .contCart {
@@ -53,17 +51,34 @@ header nav ul .icon__navbar:hover + .contCart {
   min-height: 65vh;
   min-width: 20vw;
   text-align: center;
+  text-align: -webkit-center;
   top: 5rem;
   color: #000;
   -webkit-transition: -webkit-transform ease-out 150ms;
   transition: -webkit-transform ease-out 150ms;
   transition: transform ease-out 150ms;
   transition: transform ease-out 150ms, -webkit-transform ease-out 150ms;
+  display: none;
 }
 
-.showCart {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+.contCart table tr {
+  text-align: -webkit-center;
+}
+
+.contCart .total__cart {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+}
+
+.contCart .total__cart button {
+  padding: 1em 3em;
+  border-radius: 7px;
+  border: 1px solid #fafaf7;
+  cursor: pointer;
+  background-color: #304ffe;
+  color: white;
 }
 
 .productContainer {

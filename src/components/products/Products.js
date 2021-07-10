@@ -15,7 +15,7 @@ export default function Products(props) {
                     </h4>
                 </div>
                 <div className="pr__image">
-                    <img src={props.image} />
+                    <img src={props.image} alt="Foto Producto"/>
                 </div>
                 <div className="pr__desc">
                     {props.description}

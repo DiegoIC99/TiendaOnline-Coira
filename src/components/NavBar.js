@@ -1,6 +1,7 @@
-import IconNavbar from './CartWidget'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
-export function NavBar() {
+export function NavBar(props) {
 
     return(
         <header>
@@ -9,9 +10,13 @@ export function NavBar() {
                     Shop Store
                 </div>
                 <ul>
-                    <li><a>Inicio</a></li>
-                    <li><a>Productos</a></li>
-                    <IconNavbar />
+                    <li><a href='/#'>Inicio</a></li>
+                    <li><a href='/#'>Productos</a></li>
+                    <li className="icon__navbar">
+                        <a type='button' href='/#' onClick={() => {props.stateShow( props.showCart === true ? false : true)}}>
+                            <FontAwesomeIcon icon={faShoppingCart} />
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>

@@ -1,3 +1,10 @@
+
+$colorPrincipal: #304ffe;
+
+.contShown{
+    display: block !important;
+}
+
 .contCart {
     position: absolute;
     right: 5rem;
@@ -6,11 +13,31 @@
     min-height: 65vh;
     min-width: 20vw;
     text-align: center;
+    text-align: -webkit-center;
     top: 5rem;
     color: #000;
     transition: transform ease-out 150ms;
-}
+    display:none;
 
-.showCart {
-    transform: scale(1, 1);
+    table{
+        tr{
+            text-align: -webkit-center;
+        }
+    }
+
+    .total__cart{
+        position: absolute;
+        bottom: 1em;
+        left: 0;
+        right: 0;
+
+        button {
+            padding: 1em 3em;
+            border-radius: 7px;
+            border: 1px solid #fafaf7;
+            cursor: pointer;
+            background-color: $colorPrincipal;
+            color: white;
+        }
+    }
 }
