@@ -1,23 +1,58 @@
+$colorPrincipal: #304ffe;
+
 .productContainer {
     display: grid;
-    grid-auto-rows: 22em;
-    grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+    grid-auto-rows: 30em;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
     grid-auto-flow: dense;
-    gap: 1rem;
-    padding: 0 15%;
+    gap: 4rem;
     align-items: center;
 
     .product{
         text-align: center;
         text-align: -webkit-center;
-    }
-
-    .btnSubmit{
-        display: block;
-        margin: 10px;
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+        border-radius: 7px;
     }
 
     input {
         text-align: center;
+    }
+
+    .btn__submit{
+        padding: .7em 0em;
+        width: 80%;
+        display: block;
+        margin: 10px;
+        border-radius: 7px;
+        border: 1px solid $colorPrincipal;
+        background-color: $colorPrincipal;
+        color: white;
+        cursor: pointer;
+    }
+
+    .pr__btnsQty{
+        background: #fafaf7;
+        width: fit-content;
+        padding: 7px 1em;
+        border-radius: 7px;
+        user-select: none;
+
+        input{
+            border: 1px solid #fafaf7;
+            background: #fafaf7;
+        }
+
+        button{
+            border: 0px;
+            background: #fafaf7;
+            cursor: pointer;
+        }
+    }
+
+    .pr__image img {
+        max-width: 300px;
     }
 }

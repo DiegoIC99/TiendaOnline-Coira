@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Products(props) {
 
@@ -22,10 +24,12 @@ export default function Products(props) {
                 </div>
                 <div className="pr__Qty">
                     <form onSubmit={(data) => {props.addToCart(data, props)}}>
-                        <button type='button' onClick={() => {setQty(qty + 1)}}>+</button>
-                        <input type='number' disabled value={qty} />
-                        <button type='button' onClick={() => { qty > 1 ? setQty(qty - 1) : setQty(qty)}}>-</button>
-                        <button type='submit' className='btnSubmit'>Sumar al carrito</button>
+                        <div className="pr__btnsQty">
+                            <button type='button' onClick={() => {setQty(qty + 1)}}><FontAwesomeIcon icon={faPlus} style={{fontSize: '12px'}} /></button>
+                            <input type='number' disabled value={qty} />
+                            <button type='button' onClick={() => { qty > 1 ? setQty(qty - 1) : setQty(qty)}}><FontAwesomeIcon icon={faMinus} style={{fontSize: '12px'}} /></button>
+                        </div>
+                        <button type='submit' className='btn__submit'>Sumar al carrito</button>
                     </form>
                 </div>
                 <div className="pr__price">
