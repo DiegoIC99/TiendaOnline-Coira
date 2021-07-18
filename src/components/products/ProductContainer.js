@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState,useEffect, useRef } from "react";
-import Products from './Products'
 import ItemListContainer from '../ItemListContainer'
 import Items from './Items'
 
@@ -39,7 +38,7 @@ export default function ProductContainer(props) {
         }
 
         if(itemExist === 'X'){
-            setCart([...cart])
+            setCart(cart)
         }else {
             setCart([...cart, item])
         }

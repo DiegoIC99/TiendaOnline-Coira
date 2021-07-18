@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { NavLink } from 'react-router-dom'
 
 export function NavBar(props) {
 
@@ -7,11 +8,15 @@ export function NavBar(props) {
         <header>
             <nav>
                 <div className="logo">
-                    Shop Store
+                    Shop Cart
                 </div>
                 <ul>
-                    <li><a href='/#'>Inicio</a></li>
-                    <li><a href='/#'>Productos</a></li>
+                    <li>
+                        <NavLink to='/' activeClassName='active'>Inicio</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/productos' activeClassName='active'>Productos</NavLink>
+                    </li>
                     <li className="icon__navbar">
                         <a type='button' href='/#' onClick={() => {props.stateShow( props.showCart === true ? false : true)}}>
                             <FontAwesomeIcon icon={faShoppingCart} />

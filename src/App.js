@@ -1,6 +1,7 @@
 import "./App.css";
 import "./components/css/styles.css";
 import React, { useState } from 'react'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import { NavBar } from "./components/NavBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
@@ -20,14 +21,16 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <NavBar 
-          showCart={show}
-          stateShow={showCart}/>
-      <main>
-        <ProductsContainer greeting={nameCart} show={show}/>
-      </main>
-    </div>
+    <Router>
+      <div className="container">
+        <NavBar 
+            showCart={show}
+            stateShow={showCart} />
+        <Switch>
+          <Route path="/" exact component={ () => <ProductsContainer greeting={nameCart} show={show} />}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

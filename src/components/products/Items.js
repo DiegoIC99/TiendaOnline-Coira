@@ -2,7 +2,6 @@ import React from 'react'
 import { useState, useEffect, useRef } from 'react'
 import Products from './Products'
 
-
 export default function Items(props) {
 
     const [productos,setProductos] = useState([]);

@@ -1,0 +1,2 @@
+Para que traiga los productos, se debe ingresar a la carpeta Server y ejecutar en cmd el comando nodemon
+Luego de eso hacemos npm start en la carpeta my-app
